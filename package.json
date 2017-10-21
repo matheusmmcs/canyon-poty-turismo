@@ -1,31 +1,14 @@
 {
-  "title": "New Age",
-  "name": "startbootstrap-new-age",
+  "title": "Site do Canyon do Rio Poty",
+  "name": "canyon-poty-turismo",
   "version": "4.0.0-alpha",
-  "description": "A one page app landing page HTML theme for Bootstrap.",
-  "keywords": [
-    "css",
-    "sass",
-    "html",
-    "responsive",
-    "theme",
-    "template"
-  ],
-  "homepage": "http://startbootstrap.com/template-overviews/new-age",
-  "bugs": {
-    "url": "https://github.com/BlackrockDigital/startbootstrap-new-age/issues",
-    "email": "feedback@startbootstrap.com"
-  },
-  "license": "MIT",
-  "author": "Start Bootstrap",
-  "contributors": [
-    "David Miller (http://davidmiller.io/)"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/BlackrockDigital/startbootstrap-new-age.git"
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
   },
   "dependencies": {
+    "express": "^4.13.3",
     "bootstrap": "^4.0.0-beta",
     "font-awesome": "4.7.0",
     "jquery": "^3.2.1",
@@ -41,5 +24,12 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "3.0.0"
+  },
+  "engines": {
+    "node": "4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matheusmmcs/canyon-poty-turismo"
   }
 }
