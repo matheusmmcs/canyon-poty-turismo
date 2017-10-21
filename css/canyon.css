@@ -1,0 +1,52 @@
+/*
+.my-gallery {
+  width: 100%;
+  float: left;
+}
+
+
+
+*/
+
+.my-gallery img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #777;
+  padding: 3px;
+  box-shadow: 1px 2px 2px #999;
+}
+.my-gallery figure:nth-child(odd) img {
+  transform: rotate(2deg);
+}
+.my-gallery figure:nth-child(even) img {
+  transform: rotate(-2deg);
+}
+
+.my-gallery figcaption {
+  display: none;
+}
+
+
+section.cta .cta-content h2 {
+	font-size: 50px;
+}
+section.cta .cta-content h3 {
+	font-size: 35px;
+}
+
+section.cta .cta-content h2,
+section.cta .cta-content h3 {
+    max-width: 450px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+	section.cta .cta-content h2 {
+	    font-size: 60px;
+	}
+	section.cta .cta-content h3 {
+	    font-size: 45px;
+	}
+}

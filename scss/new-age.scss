@@ -1,0 +1,59 @@
+@import "variables.scss";
+@import "mixins.scss";
+@import "global.scss";
+@import "navbar.scss";
+@import "masthead.scss";
+@import "download.scss";
+@import "features.scss";
+@import "cta.scss";
+@import "contact.scss";
+@import "footer.scss";
+@import "bootstrap-overrides.scss";
+
+
+.color-tertiary {
+	color: $theme-tertiary;
+}
+
+.color-white {
+	color: white !important;
+}
+
+
+
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ 	//background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  	background-size: cover;
+  	transition: 1s opacity;
+}
+
+.img-logo {
+	width: 100%;
+    max-width: 300px;
+}
+
+
+.schedule-info {
+	opacity: 1;
+	&.video-played {
+		transition: 0.4s;
+		opacity: 0.1;
+	}
+}
+
+@media (max-width: 768px) {
+	.schedule-info {
+	&.video-played {
+		opacity: 0;
+	}
+}
+}
