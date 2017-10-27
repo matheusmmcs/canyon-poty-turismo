@@ -231,15 +231,60 @@ pauseButton.addEventListener("click", function() {
 */
 
 $(document).ready(function() {
-    console.log('teste');
 
-    $('#sendEmailx').click(function(e) {
-        var act = 'mailto:matheusmmcs@gmail.com?subject=AgandamentoTeste' +
-                    '&body="' + 'Nome: ' + $('#nameInput').val() + ', Telefone: ' + $('#phoneInput').val() + ', Mensagem: ' + $('#msgTextarea').val() + '"';
-                    console.log(act);
-        $('#formEmail').attr('action', act);
-        $('#formEmail').submit();
+    var $EMAIL_FORM = $('#formEmail');
+    var $MSG_EMAIL = $("#msg-email");
+    var $BTN_EMAIL = $('#sendEmail');
+
+    function hideMsgEmail() {
+        $MSG_EMAIL.attr('class', 'hide');
+        sendingEmail = true;
+        $BTN_EMAIL.html('Enviando Mensagem...');
+        $BTN_EMAIL.attr('disabled', 'disabled');
+    }
+
+    function showMsgEmail(msg, success) {
+        $MSG_EMAIL.html(msg);
+        $MSG_EMAIL.attr('class', 'alert ' + (success ? 'alert-success' : 'alert-danger'));
+        sendingEmail = false;
+        $BTN_EMAIL.html('Enviar Mensagem');
+        $BTN_EMAIL.removeAttr('disabled');
+    }
+
+    function getFormData($form){
+        var unindexed_array = $form.serializeArray();
+        var indexed_array = {};
+
+        $.map(unindexed_array, function(n, i){
+            indexed_array[n['name']] = n['value'];
+        });
+
+        return indexed_array;
+    }
+
+    var sendingEmail = false;
+    $BTN_EMAIL.click(function(e) {
+        //method="post" action="/email"
+        //$EMAIL_FORM.attr('action', act);
+        //$('#formEmail').submit();
         e.preventDefault();
+
+        if (!sendingEmail) {
+            hideMsgEmail();
+            var dados = getFormData($EMAIL_FORM);
+            if (dados.name && dados.phone && dados.msg) {
+                $.ajax({
+                    type: "POST",
+                    url: $EMAIL_FORM.attr('action'),
+                    data: dados,
+                    success: function(res) {
+                        showMsgEmail(res.msg, res.status);
+                    }
+                });
+            } else {
+                showMsgEmail("Preencha os dados do formulário para entrar em contato.", false);
+            }
+        }
     });
 });
 

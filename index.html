@@ -237,7 +237,7 @@
           <div class="row align-items-center">
             <div class="col schedule-info">
               <h2>Agende seu passeio ao Canyon do Rio Poty</h2>
-              <h3>Whatsapp: <br/>(86) 98821-8321</h3>
+              <h3>Whatsapp: <br/>(86) 98105-1803</h3>
             </div>
             <div class="col">
               <a id="play-vid" class="btn btn-outline btn-xl color-white">Ver vídeo do passeio!</a>
@@ -257,18 +257,19 @@
               <h2 class="section-heading">Entre em contato conosco!</h2>
               <p>Estamos à disposição para tirar dúvidas e para marcarmos o próximo passeio!</p>
             </div>
-            <form id="formEmail" class="color-white" enctype="text/plain" method="get" action="mailto:matheusmmcs@gmail.com">
+            <div id="msg-email" class="hide" role="alert"></div>
+            <form id="formEmail" method="post" action="/email" class="color-white">
               <div class="form-group">
                 <label for="nameInput">Nome</label>
-                <input type="text" class="form-control" id="nameInput" placeholder="Seu Nome">
+                <input type="text" class="form-control" name="name" id="nameInput" placeholder="Seu Nome">
               </div>
               <div class="form-group">
                 <label for="phoneInput">Telefone</label>
-                <input type="text" class="form-control" id="phoneInput" placeholder="(DDD) 99999-9999">
+                <input type="text" class="form-control" name="phone" id="phoneInput" placeholder="(DDD) 99999-9999">
               </div>
               <div class="form-group">
                 <label for="msgTextarea">Mensagem</label>
-                <textarea class="form-control" id="msgTextarea" rows="3"></textarea>
+                <textarea class="form-control" id="msgTextarea" name="msg" rows="3"></textarea>
               </div>
               <button type="submit" id="sendEmail" class="btn btn-secundary">Enviar Mensagem</button>
             </form>
