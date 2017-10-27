@@ -279,6 +279,10 @@ $(document).ready(function() {
                     data: dados,
                     success: function(res) {
                         showMsgEmail(res.msg, res.status);
+                    },
+                    error: function(request, status, error) {
+                        showMsgEmail("Ocorreu algum problema no servidor, tente novamente.", false);
+                        console.error(request, status, error);
                     }
                 });
             } else {
