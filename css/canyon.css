@@ -53,3 +53,46 @@ section.cta .cta-content h3 {
 	    font-size: 45px;
 	}
 }
+
+
+
+
+section.accommodation {
+  position: relative;
+  width: 100%;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color: white;
+  background-image: url("../img/canyon/bg-accommodation-p1-mobile.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.accommodation .accommodation-heading {
+  padding-top: 120px;
+  padding-bottom: 20px;
+  background: white;
+}
+.accommodation-heading h2 {
+  color: #fa8a00;
+}
+section.accommodation .feature-item h3 {
+  color: #fa8a00;
+  font-weight: bold;
+  font-size: 26px;
+}
+section.accommodation .feature-item i {
+    font-size: 80px;
+    display: block;
+    margin-bottom: 15px;
+    background: -webkit-linear-gradient(to left,#0073ff,#ff8d00);
+    background: linear-gradient(to left,#0073ff,#ff8d00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@media (min-width: 992px) {
+  section.accommodation {
+    background-image: url("../img/canyon/bg-accommodation-p2.jpg");
+    min-height: 775px;
+    background-position: center;
+  }
+}

@@ -1,5 +1,5 @@
 /*!
- * Start Bootstrap - Site do Canyon do Rio Poty v1 ()
+ * Start Bootstrap - Site do Canyon do Rio Poty v4.5.0 ()
  * Copyright 2013-2017 
  * Licensed under  (https://github.com/BlackrockDigital/canyon-poty-turismo/blob/master/LICENSE)
  */
